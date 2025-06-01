@@ -80,11 +80,25 @@ article {
   text-align: right;
 }
 
+.article-body h2 {
+  margin: 0 0 0.5rem;
+  color: #AF1B3F;
+  font-size: 1.4rem;
+}
+
+.article-body p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+}
+
 .article-body img {
   width: 100%;
   max-width: 250px;
   height: auto;
   background: #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .filters {

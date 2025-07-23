@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recommendations</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Quick Genre</h2>
+    <nav>
+      <ul>
+        <li><a href="recommendations.html?genre=rock">Rock</a></li>
+        <li><a href="recommendations.html?genre=pop">Pop</a></li>
+        <li><a href="recommendations.html?genre=reggae">Reggae</a></li>
+        <li><a href="recommendations.html?genre=rap">Rap</a></li>
+        <li><a href="recommendations.html?genre=classical">Classical</a></li>
+        <li><a href="recommendations.html?genre=country">Country</a></li>
+        <li><a href="recommendations.html?genre=indie">Indie</a></li>
+        <li><a href="saved.html">Saved</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="recommendation-content">
+    <button id="theme-toggle">Toggle Theme</button>
+
+    <section class="artists">
+      <h2>Artists</h2>
+      <div class="card-list">
+        <div class="card">Artist 1 <button onclick="saveArtist('Artist 1')">Save</button></div>
+        <div class="card">Artist 2 <button onclick="saveArtist('Artist 2')">Save</button></div>
+        <div class="card">Artist 3 <button onclick="saveArtist('Artist 3')">Save</button></div>
+      </div>
+    </section>
+
+    <section class="songs">
+      <h2>Songs</h2>
+      <div class="card-list">
+        <div class="card">Song A <button onclick="saveSong('Song A')">Save</button></div>
+        <div class="card">Song B <button onclick="saveSong('Song B')">Save</button></div>
+        <div class="card">Song C <button onclick="saveSong('Song C')">Save</button></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

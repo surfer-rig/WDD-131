@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Recommendations</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rampart+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Quick Genre</h2>
+    <nav>
+      <ul>
+        <li><a href="recommendations.html?genre=rock">Rock</a></li>
+        <li><a href="recommendations.html?genre=pop">Pop</a></li>
+        <li><a href="recommendations.html?genre=reggae">Reggae</a></li>
+        <li><a href="recommendations.html?genre=rap">Rap</a></li>
+        <li><a href="recommendations.html?genre=classical">Classical</a></li>
+        <li><a href="recommendations.html?genre=country">Country</a></li>
+        <li><a href="recommendations.html?genre=indie">Indie</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="home-main" class="main-content">
+    <div class="center-content">
+      <h1 class="tagline">Come here to find all your new favorite music</h1>
+      <img src="music.png" alt="Music Logo" class="logo">
+      
+      <button id="search-toggle" class="find-btn">Search</button>
+
+      <form id="genre-search-form" class="hidden">
+        <label for="genre-input">Type in your favorite genres</label><br />
+        <input type="text" id="genre-input" name="genre" placeholder="e.g. rock, pop" required />
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const searchToggle = document.getElementById('search-toggle');
+    const genreForm = document.getElementById('genre-search-form');
+    const genreInput = document.getElementById('genre-input');
+
+    searchToggle.addEventListener('click', () => {
+      genreForm.classList.toggle('hidden');
+      genreInput.focus();
+    });
+
+    genreForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const genre = genreInput.value.trim().toLowerCase();
+      if (genre) {
+        window.location.href = `recommendations.html?genre=${encodeURIComponent(genre)}`;
+      }
+    });
+  </script>
+</body>
+</html>
